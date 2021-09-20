@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  {% include './components/head.html' %}
+
+  <body>
+    {% include './components/header.html' %}
+
+    <form method="POST" action="/review_evaluation">
+      {% csrf_token %}
+      <section>
+        <div><h2>Рецензия</h2></div>
+        <div><textarea class="form-control" name="textarea-review" rows="10"></textarea></div>
+        <div><button type="submit" class="btn btn-outline-success">Submit</button></div>
+      </section>
+    </form>
+
+    {% include './components/footer.html' %}
+  </body>
+</html>
