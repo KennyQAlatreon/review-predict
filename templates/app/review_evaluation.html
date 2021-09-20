@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  {% include './components/head.html' %}
+
+  <body>
+    {% include './components/header.html' %}
+
+    <section>
+      <div><h2>Рецензия</h2></div>
+      <div>{{ review }}</div>
+      <div><h3>предсказанная оценка: 
+        <span class="{% if score < 4.5 %}text-danger
+                     {% elif score < 6.5 %}text-warning
+                     {% else %}text-success{% endif %}">{{ score }}</span>
+      </h3></div>
+    </section>
+
+    {% include './components/footer.html' %}
+  </body>
+</html>
