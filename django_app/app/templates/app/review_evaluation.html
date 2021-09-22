@@ -9,8 +9,7 @@
       <div><h2>Рецензия</h2></div>
       <div>{{ review }}</div>
       <div><h3>предсказанная оценка: 
-        <span class="{% if score < 4.5 %}text-danger
-                     {% elif score < 6.5 %}text-warning
+        <span class="{% if score < 5 %}text-danger
                      {% else %}text-success{% endif %}">{{ score }}</span>
       </h3></div>
     </section>
